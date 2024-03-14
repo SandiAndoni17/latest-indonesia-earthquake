@@ -1,4 +1,6 @@
 import os
+
+import setuptools
 from setuptools import setup
 
 # Utility function to read the README file.
@@ -9,20 +11,21 @@ def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
 setup(
-    name = "an_example_pypi_project",
-    version = "0.0.4",
-    author = "Andrew Carter",
-    author_email = "andrewjcarter@gmail.com",
-    description = ("An demonstration of how to create, document, and publish "
-                                   "to the cheese shop a5 pypi.org."),
-    license = "BSD",
-    keywords = "example documentation tutorial",
-    url = "http://packages.python.org/an_example_pypi_project",
-    packages=['an_example_pypi_project', 'tests'],
+    name = "latest_earthquake_indonesia",
+    version = "0.1",
+    author = "Sandi Andoni",
+    author_email = "sandiandoni17@gmail.com",
+    description = ("Athis package will get the latest earthquake from BMKG | Meteorological, Climatological, "
+                   "and Geophysical Agency."),
+
+    url = "https://github.com/SandiAndoni17/Early-EarthQuake-Detection",
+    #packages=['an_example_pypi_project', 'tests'],
     long_description=read('README'),
     classifiers=[
-        "Development Status :: 3 - Alpha",
-        "Topic :: Utilities",
-        "License :: OSI Approved :: BSD License",
+        "Development Status :: 5- Production/Stable",
+
     ],
+    packages = setuptools.find_packages(),
+    python_requires=">=3.12"
+
 )
